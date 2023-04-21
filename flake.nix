@@ -47,7 +47,6 @@
               ExecStart = "${pkgs.php}/bin/php ${bundle}/client.php";
             };
           };
-        };
 
         qbb-server = {
             description = "${description}-server";
@@ -61,6 +60,7 @@
           };
         };
       };
+    };
 
     devShell.${system} = with pkgs; mkShell {
       buildInputs = [
